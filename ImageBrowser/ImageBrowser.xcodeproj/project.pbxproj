@@ -42,8 +42,8 @@
 		1556D7C51828EFAC00C5416B /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 1556D7A91828EFAC00C5416B /* UIImage+WebP.m */; };
 		1556D7C61828EFAC00C5416B /* UIImageView+MJWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1556D7AB1828EFAC00C5416B /* UIImageView+MJWebCache.m */; };
 		1556D7C71828EFAC00C5416B /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1556D7AD1828EFAC00C5416B /* UIImageView+WebCache.m */; };
-		B54269451828F2E8001DCBBC /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54269441828F2E8001DCBBC /* FacebookSDK.framework */; };
 		1556D7CA1828F0E200C5416B /* EIMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1556D7C91828F0E200C5416B /* EIMainViewController.m */; };
+		B54269471828F4D1001DCBBC /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54269461828F4D1001DCBBC /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,9 +121,9 @@
 		1556D7AB1828EFAC00C5416B /* UIImageView+MJWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MJWebCache.m"; sourceTree = "<group>"; };
 		1556D7AC1828EFAC00C5416B /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		1556D7AD1828EFAC00C5416B /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
-		B54269441828F2E8001DCBBC /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		1556D7C81828F0E200C5416B /* EIMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EIMainViewController.h; sourceTree = "<group>"; };
 		1556D7C91828F0E200C5416B /* EIMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EIMainViewController.m; sourceTree = "<group>"; };
+		B54269461828F4D1001DCBBC /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ImageBrowser/FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1556D74B1828EF5D00C5416B /* CoreGraphics.framework in Frameworks */,
-				B54269451828F2E8001DCBBC /* FacebookSDK.framework in Frameworks */,
+				B54269471828F4D1001DCBBC /* FacebookSDK.framework in Frameworks */,
 				1556D74D1828EF5D00C5416B /* UIKit.framework in Frameworks */,
 				1556D7491828EF5D00C5416B /* Foundation.framework in Frameworks */,
 			);
@@ -173,7 +173,7 @@
 		1556D7471828EF5D00C5416B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B54269431828F2E8001DCBBC /* FrameWork */,
+				B54269461828F4D1001DCBBC /* FacebookSDK.framework */,
 				1556D7481828EF5D00C5416B /* Foundation.framework */,
 				1556D74A1828EF5D00C5416B /* CoreGraphics.framework */,
 				1556D74C1828EF5D00C5416B /* UIKit.framework */,
@@ -302,15 +302,6 @@
 				1556D7AD1828EFAC00C5416B /* UIImageView+WebCache.m */,
 			);
 			path = SDWebImage;
-			sourceTree = "<group>";
-		};
-		B54269431828F2E8001DCBBC /* FrameWork */ = {
-			isa = PBXGroup;
-			children = (
-				B54269441828F2E8001DCBBC /* FacebookSDK.framework */,
-			);
-			name = FrameWork;
-			path = ImageBrowser/FrameWork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -558,6 +549,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/xueyingsong/ImageBrowser/ImageBrowser/ImageBrowser/FrameWork,
+					/Users/xueyingsong/ImageBrowser/ImageBrowser/ImageBrowser,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageBrowser/ImageBrowser-Prefix.pch";
@@ -575,6 +567,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/xueyingsong/ImageBrowser/ImageBrowser/ImageBrowser/FrameWork,
+					/Users/xueyingsong/ImageBrowser/ImageBrowser/ImageBrowser,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageBrowser/ImageBrowser-Prefix.pch";
