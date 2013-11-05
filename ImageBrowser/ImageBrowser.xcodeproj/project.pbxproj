@@ -13,7 +13,6 @@
 		1556D7531828EF5D00C5416B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1556D7511828EF5D00C5416B /* InfoPlist.strings */; };
 		1556D7551828EF5D00C5416B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1556D7541828EF5D00C5416B /* main.m */; };
 		1556D7591828EF5D00C5416B /* EIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1556D7581828EF5D00C5416B /* EIAppDelegate.m */; };
-		1556D75B1828EF5D00C5416B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1556D75A1828EF5D00C5416B /* Images.xcassets */; };
 		1556D7621828EF5D00C5416B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1556D7611828EF5D00C5416B /* XCTest.framework */; };
 		1556D7631828EF5D00C5416B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1556D7481828EF5D00C5416B /* Foundation.framework */; };
 		1556D7641828EF5D00C5416B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1556D74C1828EF5D00C5416B /* UIKit.framework */; };
@@ -44,6 +43,7 @@
 		1556D7C61828EFAC00C5416B /* UIImageView+MJWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1556D7AB1828EFAC00C5416B /* UIImageView+MJWebCache.m */; };
 		1556D7C71828EFAC00C5416B /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1556D7AD1828EFAC00C5416B /* UIImageView+WebCache.m */; };
 		B54269451828F2E8001DCBBC /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54269441828F2E8001DCBBC /* FacebookSDK.framework */; };
+		1556D7CA1828F0E200C5416B /* EIMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1556D7C91828F0E200C5416B /* EIMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +67,6 @@
 		1556D7561828EF5D00C5416B /* ImageBrowser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageBrowser-Prefix.pch"; sourceTree = "<group>"; };
 		1556D7571828EF5D00C5416B /* EIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EIAppDelegate.h; sourceTree = "<group>"; };
 		1556D7581828EF5D00C5416B /* EIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EIAppDelegate.m; sourceTree = "<group>"; };
-		1556D75A1828EF5D00C5416B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1556D7601828EF5D00C5416B /* ImageBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1556D7611828EF5D00C5416B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1556D7691828EF5D00C5416B /* ImageBrowserTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImageBrowserTests-Info.plist"; sourceTree = "<group>"; };
@@ -123,6 +122,8 @@
 		1556D7AC1828EFAC00C5416B /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		1556D7AD1828EFAC00C5416B /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		B54269441828F2E8001DCBBC /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		1556D7C81828F0E200C5416B /* EIMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EIMainViewController.h; sourceTree = "<group>"; };
+		1556D7C91828F0E200C5416B /* EIMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EIMainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,8 +188,9 @@
 				1556D7771828EFAC00C5416B /* lib */,
 				1556D7571828EF5D00C5416B /* EIAppDelegate.h */,
 				1556D7581828EF5D00C5416B /* EIAppDelegate.m */,
-				1556D75A1828EF5D00C5416B /* Images.xcassets */,
 				1556D74F1828EF5D00C5416B /* Supporting Files */,
+				1556D7C81828F0E200C5416B /* EIMainViewController.h */,
+				1556D7C91828F0E200C5416B /* EIMainViewController.m */,
 			);
 			path = ImageBrowser;
 			sourceTree = "<group>";
@@ -388,7 +390,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1556D7531828EF5D00C5416B /* InfoPlist.strings in Resources */,
-				1556D75B1828EF5D00C5416B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +428,7 @@
 				1556D7AE1828EFAC00C5416B /* MBProgressHUD+Add.m in Sources */,
 				1556D7B91828EFAC00C5416B /* NSData+GIF.m in Sources */,
 				1556D7551828EF5D00C5416B /* main.m in Sources */,
+				1556D7CA1828F0E200C5416B /* EIMainViewController.m in Sources */,
 				1556D7B41828EFAC00C5416B /* MJPhotoLoadingView.m in Sources */,
 				1556D7C51828EFAC00C5416B /* UIImage+WebP.m in Sources */,
 				1556D7C01828EFAC00C5416B /* SDWebImageManager.m in Sources */,
