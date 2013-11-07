@@ -548,8 +548,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/xueyingsong/ImageBrowser/ImageBrowser/ImageBrowser/FrameWork,
-					/Users/xueyingsong/ImageBrowser/ImageBrowser/ImageBrowser,
+					"$(SRCROOT)/ImageBrowser/",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageBrowser/ImageBrowser-Prefix.pch";
@@ -566,8 +565,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/xueyingsong/ImageBrowser/ImageBrowser/ImageBrowser/FrameWork,
-					/Users/xueyingsong/ImageBrowser/ImageBrowser/ImageBrowser,
+					"$(SRCROOT)/ImageBrowser/",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageBrowser/ImageBrowser-Prefix.pch";
