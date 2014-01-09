@@ -7,6 +7,7 @@
 //
 
 #import "EIAppDelegate.h"
+#import "EIMainViewController.h"
 
 @implementation EIAppDelegate
 
@@ -15,6 +16,16 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    [self.window.layer setCornerRadius:4];
+    [self.window.layer setMasksToBounds:YES];
+    
+    EIMainViewController *viewController = [[EIMainViewController alloc] init];
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    [navController.navigationBar setTranslucent:NO];
+    navController.toolbarHidden=NO;//显示自带的toolbar
+    navController.toolbar.translucent=YES;//工具栏可为内容区域，透明
+    self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     return YES;
 }

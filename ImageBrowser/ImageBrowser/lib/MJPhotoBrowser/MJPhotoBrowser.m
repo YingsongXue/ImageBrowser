@@ -26,7 +26,9 @@
     MJPhotoToolbar *_toolbar;
     
     // 一开始的状态栏
-    BOOL _statusBarHiddenInited;
+//    BOOL _statusBarHiddenInited;
+    
+    BOOL isHiden;
 }
 @end
 
@@ -35,23 +37,41 @@
 #pragma mark - Lifecycle
 - (void)loadView
 {
-    _statusBarHiddenInited = [UIApplication sharedApplication].isStatusBarHidden;
+//    _statusBarHiddenInited = [UIApplication sharedApplication].isStatusBarHidden;
     // 隐藏状态栏
-    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+//    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
     self.view = [[UIView alloc] init];
     self.view.frame = [UIScreen mainScreen].bounds;
 	self.view.backgroundColor = [UIColor blackColor];
+    
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+    singleTap.delaysTouchesBegan = YES;
+    singleTap.numberOfTapsRequired = 1;
+    [self.view addGestureRecognizer:singleTap];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    isHiden = NO;
     // 1.创建UIScrollView
     [self createScrollView];
     
     // 2.创建工具条
     [self createToolbar];
+}
+
+- (void)handleSingleTap:(UITapGestureRecognizer *)tap {
+    if (isHiden) {
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
+        isHiden = NO;
+    }
+    else {
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+        isHiden = YES;
+    }
 }
 
 - (void)show
@@ -135,7 +155,7 @@
 #pragma mark - MJPhotoView代理
 - (void)photoViewSingleTap:(MJPhotoView *)photoView
 {
-    [UIApplication sharedApplication].statusBarHidden = _statusBarHiddenInited;
+//    [UIApplication sharedApplication].statusBarHidden = _statusBarHiddenInited;
     self.view.backgroundColor = [UIColor clearColor];
     
     // 移除工具条
@@ -264,4 +284,13 @@
 	[self showPhotos];
     [self updateTollbarState];
 }
+
+- (void)saveImage
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        MJPhoto *photo = _photos[_currentPhotoIndex];
+        UIImageWriteToSavedPhotosAlbum(photo.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+    });
+}
+
 @end

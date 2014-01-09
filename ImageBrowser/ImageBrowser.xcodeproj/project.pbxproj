@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1556D7491828EF5D00C5416B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1556D7481828EF5D00C5416B /* Foundation.framework */; };
 		1556D74B1828EF5D00C5416B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1556D74A1828EF5D00C5416B /* CoreGraphics.framework */; };
-		1556D74D1828EF5D00C5416B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1556D74C1828EF5D00C5416B /* UIKit.framework */; };
 		1556D7531828EF5D00C5416B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1556D7511828EF5D00C5416B /* InfoPlist.strings */; };
 		1556D7551828EF5D00C5416B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1556D7541828EF5D00C5416B /* main.m */; };
 		1556D7591828EF5D00C5416B /* EIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1556D7581828EF5D00C5416B /* EIAppDelegate.m */; };
@@ -43,6 +42,7 @@
 		1556D7C61828EFAC00C5416B /* UIImageView+MJWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1556D7AB1828EFAC00C5416B /* UIImageView+MJWebCache.m */; };
 		1556D7C71828EFAC00C5416B /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1556D7AD1828EFAC00C5416B /* UIImageView+WebCache.m */; };
 		1556D7CA1828F0E200C5416B /* EIMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1556D7C91828F0E200C5416B /* EIMainViewController.m */; };
+		1589D516187D4F49002E8464 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1556D74C1828EF5D00C5416B /* UIKit.framework */; };
 		B54269471828F4D1001DCBBC /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54269461828F4D1001DCBBC /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
@@ -131,9 +131,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1589D516187D4F49002E8464 /* UIKit.framework in Frameworks */,
 				1556D74B1828EF5D00C5416B /* CoreGraphics.framework in Frameworks */,
 				B54269471828F4D1001DCBBC /* FacebookSDK.framework in Frameworks */,
-				1556D74D1828EF5D00C5416B /* UIKit.framework in Frameworks */,
 				1556D7491828EF5D00C5416B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,6 +554,8 @@
 				GCC_PREFIX_HEADER = "ImageBrowser/ImageBrowser-Prefix.pch";
 				INFOPLIST_FILE = "ImageBrowser/ImageBrowser-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos7.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -571,6 +573,8 @@
 				GCC_PREFIX_HEADER = "ImageBrowser/ImageBrowser-Prefix.pch";
 				INFOPLIST_FILE = "ImageBrowser/ImageBrowser-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos7.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

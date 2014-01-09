@@ -23,6 +23,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    /*
+    [self.navigationController.navigationBar setTranslucent:NO];
+    self.navigationController.toolbarHidden=NO;//显示自带的toolbar
+    self.navigationController.toolbar.translucent=YES;//工具栏可为内容区域，透明
+     */
     // 0.图片链接
     _urls = @[@"http://ww4.sinaimg.cn/thumbnail/7f8c1087gw1e9g06pc68ug20ag05y4qq.gif", @"http://ww3.sinaimg.cn/thumbnail/8e88b0c1gw1e9lpr0nly5j20pf0gygo6.jpg", @"http://ww4.sinaimg.cn/thumbnail/8e88b0c1gw1e9lpr1d0vyj20pf0gytcj.jpg", @"http://ww3.sinaimg.cn/thumbnail/8e88b0c1gw1e9lpr1xydcj20gy0o9q6s.jpg", @"http://ww2.sinaimg.cn/thumbnail/8e88b0c1gw1e9lpr2n1jjj20gy0o9tcc.jpg", @"http://ww2.sinaimg.cn/thumbnail/8e88b0c1gw1e9lpr39ht9j20gy0o6q74.jpg", @"http://ww3.sinaimg.cn/thumbnail/8e88b0c1gw1e9lpr3xvtlj20gy0obadv.jpg", @"http://ww4.sinaimg.cn/thumbnail/8e88b0c1gw1e9lpr4nndfj20gy0o9q6i.jpg", @"http://ww3.sinaimg.cn/thumbnail/8e88b0c1gw1e9lpr57tn9j20gy0obn0f.jpg"];
     
@@ -76,6 +81,7 @@
     MJPhotoBrowser *browser = [[MJPhotoBrowser alloc] init];
     browser.currentPhotoIndex = tap.view.tag; // 弹出相册时显示的第一张图片是？
     browser.photos = photos; // 设置所有的图片
-    [browser show];
+//    [browser show];
+    [self.navigationController pushViewController:browser animated:YES];
 }
 @end
